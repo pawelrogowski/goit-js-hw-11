@@ -1,4 +1,4 @@
-<h1>Acceptance criteria</h1></header><ul><li><code>goit-js-hw-11</code> repository created.</li><li>In your submitted homework, there are two links: to the source files and your
+<h1>GoIT-js-hw-11</h1><h1>Acceptance criteria</h1></header><ul><li><code>goit-js-hw-11</code> repository created.</li><li>In your submitted homework, there are two links: to the source files and your
 working page on <code>GitHub Pages</code>.</li><li>During live page visits, there are no errors or warnings generated in the
 console.</li><li>Project built with
 <a href="https://github.com/goitacademy/parcel-project-template" target="_blank" rel="noopener noreferrer">parcel-project-template</a>.</li><li>For HTTP requests, the <a href="https://axios-http.com/" target="_blank" rel="noopener noreferrer">axios</a> library is used.</li><li><code>async/await</code> syntax.</li><li>For notifications, the <a href="https://github.com/notiflix/Notiflix#readme" target="_blank" rel="noopener noreferrer">notiflix</a>
