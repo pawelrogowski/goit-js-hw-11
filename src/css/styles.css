@@ -55,6 +55,7 @@ body {
 .search-form__button {
   width: 31px;
   height: 31px;
+  min-width: 31px;
   cursor: pointer;
   background: none;
   border: none;
@@ -74,6 +75,7 @@ body {
 .search-form__icon {
   fill: #60676a;
   transition: 0.55s;
+  stroke-width: 1px;
 }
 .search-form__input:not(:placeholder-shown) + .search-form__button .search-form__icon {
   fill: #fcfeff;
