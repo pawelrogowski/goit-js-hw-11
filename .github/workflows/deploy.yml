@@ -21,5 +21,3 @@ jobs:
         with:
           branch: gh-pages
           folder: dist
-          env:
-          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
