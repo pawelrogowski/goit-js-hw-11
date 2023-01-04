@@ -2,7 +2,6 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  display: block;
 }
 title {
   display: none;
@@ -31,13 +30,14 @@ body {
   background: #2c3032;
   border: none;
   border-radius: 20px;
-  padding: 20px;
+  padding: 20px 49px 20px 22px;
   height: 20px;
   display: block;
   color: #fcfeff;
   max-width: 300px;
   width: 100%;
   transition: 0.55s;
+  outline: #1f9ede00 solid 1px;
 }
 .search-form__input:focus {
   transition: 0.55s;
@@ -65,8 +65,12 @@ body {
   display: flex;
   position: relative;
   right: 36px;
+  outline: #1f9ede00 solid 1px;
 }
-
+.search-form__button:focus {
+  transition: 0.55s;
+  outline: #1f9ede solid 1px;
+}
 .search-form__icon {
   fill: #60676a;
   transition: 0.55s;
