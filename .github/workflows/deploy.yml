@@ -13,7 +13,7 @@ jobs:
 
       - name: Set environment variable
         run: |
-          echo "::set-env name=API_KEY::${{ secrets.API_KEY }}"
+          echo "::set-env name=PIXABAY_API_KEY::${{ secrets.PIXABAY_API_KEY }}"
 
       - name: Install and Build 🔧
         run: |
