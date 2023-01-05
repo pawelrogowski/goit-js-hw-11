@@ -1,4 +1,6 @@
 apiKey = process.env.PIXABAY_API_KEY;
+console.log(process.env.PIXABAY_API_KEY);
+
 import axios from 'axios';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 import SimpleLightbox from 'simplelightbox';
