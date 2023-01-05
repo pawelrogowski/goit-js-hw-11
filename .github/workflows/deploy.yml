@@ -8,14 +8,14 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v2.3.1
-
-      - name: Step 2 - GitHub Action if statement (true)
+      - name: setEnv
         env:
           WHO_TO_TRUST: ${{ secrets.SECRET_TOKEN }}
         if: env.WHO_TO_TRUST == 'TrustNo1'
         run: echo "I know what the secret token is!"
+
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2.3.1
 
       - name: Install and Build 🔧
         run: |
