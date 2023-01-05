@@ -1,7 +1,7 @@
 import axios from 'axios';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 import SimpleLightbox from 'simplelightbox';
-
+const apiKey = process.env.PIXABAY_API_KEY;
 const searchForm = document.querySelector('#search-form');
 const searchInput = document.querySelector('.search-form__input');
 const galleryElement = document.querySelector('.gallery');
@@ -18,6 +18,7 @@ async function fetchImage(query, options) {
         ...options,
       },
     });
+    console.log(response.data.hits);
     return response.data.hits;
   } catch (error) {
     console.error(error);

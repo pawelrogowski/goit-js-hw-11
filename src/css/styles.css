@@ -86,3 +86,39 @@ body {
   fill: #fcfeff;
   transition: 0.55s;
 }
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery__item {
+  display: flex;
+  align-items: center;
+  height: 300px;
+  flex-basis: 640px;
+  margin: 10px;
+}
+
+.gallery__image {
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (min-width: 640px) and (max-width: 1279px) {
+  .gallery__item {
+    flex-basis: calc(50% - 20px);
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+  .gallery__item {
+    flex-basis: calc(33.33% - 20px);
+  }
+}
+
+@media (min-width: 1920px) {
+  .gallery__item {
+    flex-basis: calc(20% - 20px);
+  }
+}
