@@ -1,4 +1,5 @@
-apiKey = process.env.PIXABAY_API_KEY;
+const apiKey = process.env.pixabay_key;
+
 import axios from 'axios';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 import SimpleLightbox from 'simplelightbox';
@@ -11,7 +12,7 @@ async function fetchImage(query, options) {
   try {
     const response = await axios.get('https://pixabay.com/api/', {
       params: {
-        key: `''32579471-afdc8e0303a1983f0362481fc''`,
+        key: apiKey,
         q: query,
         image_type: 'photo',
         orientation: 'horizontal',
