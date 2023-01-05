@@ -1,14 +1,15 @@
+apiKey = process.env.PIXABAY_API_KEY;
 import axios from 'axios';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 import SimpleLightbox from 'simplelightbox';
-const apiKey = process.env.PIXABAY_API_KEY;
+console.log(apiKey);
 const searchForm = document.querySelector('#search-form');
 const searchInput = document.querySelector('.search-form__input');
 const galleryElement = document.querySelector('.gallery');
 
 async function fetchImage(query, options) {
   try {
-    const response = await axios.get('https://pixabay.com/api/', {
+    const response = await axios.get(`https://pixabay.com/api/${apiKey}`, {
       params: {
         key: '32579471-afdc8e0303a1983f0362481fc',
         q: query,
