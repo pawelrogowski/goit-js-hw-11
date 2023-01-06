@@ -87,15 +87,14 @@ body {
       fill: #60676a;
       transition: 0.55s;
       stroke-width: 1px;
-
-      &:not(:placeholder-shown) {
-        fill: #fcfeff;
-        transition: 0.55s;
-      }
     }
     &:hover {
       transition: 0.55s;
       background-color: $accent-color;
+    }
+    &:hover .search-form__icon {
+      fill: #fcfeff;
+      transition: 0.55s;
     }
     &:focus {
       transition: 0.55s;
