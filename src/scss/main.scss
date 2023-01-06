@@ -49,7 +49,7 @@ body {
     max-width: 300px;
     width: 100%;
     transition: 0.55s;
-    outline: $accent-color solid 1px;
+    outline: none;
 
     &:focus {
       transition: 0.55s;
@@ -81,7 +81,7 @@ body {
     display: flex;
     position: relative;
     right: 36px;
-    outline: $accent-color solid 1px;
+    outline: none;
 
     &__icon {
       fill: #60676a;
@@ -93,9 +93,13 @@ body {
         transition: 0.55s;
       }
     }
+    &:hover {
+      transition: 0.55s;
+      background-color: $accent-color;
+    }
     &:focus {
       transition: 0.55s;
-      outline: $accent-color solid 1px;
+      background-color: $accent-color;
     }
 
     &:placeholder-shown + &__icon {
@@ -186,9 +190,4 @@ body {
     color: $accent-color;
     scale: 1.05;
   }
-}
-.search-form__input:not(:placeholder-shown) + .search-form__button {
-  cursor: pointer;
-  background-color: $accent-color;
-  transition: 0.55s;
 }

@@ -70,7 +70,7 @@ body {
   width: 100%;
   -webkit-transition: 0.55s;
   transition: 0.55s;
-  outline: #1f9ede solid 1px;
+  outline: none;
 }
 .search-form__input:focus {
   -webkit-transition: 0.55s;
@@ -121,7 +121,7 @@ body {
   display: flex;
   position: relative;
   right: 36px;
-  outline: #1f9ede solid 1px;
+  outline: none;
 }
 .search-form__button__icon {
   fill: #60676a;
@@ -144,10 +144,15 @@ body {
   -webkit-transition: 0.55s;
   transition: 0.55s;
 }
+.search-form__button:hover {
+  -webkit-transition: 0.55s;
+  transition: 0.55s;
+  background-color: #1f9ede;
+}
 .search-form__button:focus {
   -webkit-transition: 0.55s;
   transition: 0.55s;
-  outline: #1f9ede solid 1px;
+  background-color: #1f9ede;
 }
 .search-form__button:-moz-placeholder-shown + .search-form__button__icon {
   cursor: auto;
@@ -253,25 +258,4 @@ body {
   outline: #1f9ede solid 1px;
   color: #1f9ede;
   scale: 1.05;
-}
-
-.search-form__input:not(:-moz-placeholder-shown) + .search-form__button {
-  cursor: pointer;
-  background-color: #1f9ede;
-  -moz-transition: 0.55s;
-  transition: 0.55s;
-}
-
-.search-form__input:not(:-ms-input-placeholder) + .search-form__button {
-  cursor: pointer;
-  background-color: #1f9ede;
-  -ms-transition: 0.55s;
-  transition: 0.55s;
-}
-
-.search-form__input:not(:placeholder-shown) + .search-form__button {
-  cursor: pointer;
-  background-color: #1f9ede;
-  -webkit-transition: 0.55s;
-  transition: 0.55s;
 }/*# sourceMappingURL=main.css.map */
