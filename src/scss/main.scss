@@ -1,4 +1,9 @@
 $accent-color: #1f9ede;
+$main-bg-color: #3e3e3e;
+$secondary-bg-color: #2b2b2b;
+$tertiary-bg-color: #373737;
+$main-font-color: #d8d6d4;
+$main-border-color: #000;
 
 * {
   box-sizing: border-box;
@@ -11,7 +16,7 @@ title {
 body {
   font-family: 'Ubuntu', 'Roboto', 'Raleway', sans-serif;
   color: #212121;
-  background-color: #131415;
+  background-color: $main-bg-color;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -19,12 +24,13 @@ body {
 }
 
 .header {
-  background-color: #1c1e1f;
+  background-color: #2b2b2b;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 8px 20px;
   box-shadow: 0px 6px 8px -3px rgba(0, 0, 0, 0.31);
+  outline: 1px solid #0e0e0e;
   position: sticky;
   top: 0;
   z-index: 1;
@@ -39,7 +45,7 @@ body {
   &__input {
     font-family: 'Ubuntu';
     font-size: 16px;
-    background: #2c3032;
+    background: $main-bg-color;
     border: none;
     border-radius: 20px;
     padding: 20px 49px 20px 22px;
@@ -49,7 +55,7 @@ body {
     max-width: 300px;
     width: 100%;
     transition: 0.55s;
-    outline: none;
+    outline: 1px solid #212121;
 
     &:focus {
       transition: 0.55s;
@@ -123,6 +129,9 @@ body {
   &__item {
     display: block;
     position: relative;
+    box-shadow: 0px 5px 6px -1px rgba(0, 0, 0, 0.6);
+    -webkit-box-shadow: 0px 5px 6px -1px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 0px 5px 6px -1px rgba(0, 0, 0, 0.6);
     width: 400px;
     height: 300px;
     overflow: hidden;
@@ -145,8 +154,8 @@ body {
     object-fit: cover;
     transition: 0.5s;
     &:hover {
-      transition: all 20s cubic-bezier(0.25, 0.1, 0.25, 1);
-      transform: scale3d(1.5, 1.5, 1.5);
+      transition: all 7s cubic-bezier(0.25, 0.1, 0.25, 1);
+      transform: scale3d(1.1, 1.1, 1.1);
     }
   }
 
@@ -184,6 +193,9 @@ body {
   font-family: Ubuntu;
   font-size: 20px;
   transition: all 0.15s;
+  box-shadow: 0px 5px 6px -1px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0px 5px 6px -1px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0px 5px 6px -1px rgba(0, 0, 0, 0.6);
   &:hover {
     transition: 0.15s;
     outline: $accent-color solid 1px;

@@ -12,7 +12,7 @@ title {
 body {
   font-family: "Ubuntu", "Roboto", "Raleway", sans-serif;
   color: #212121;
-  background-color: #131415;
+  background-color: #3e3e3e;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -25,7 +25,7 @@ body {
 }
 
 .header {
-  background-color: #1c1e1f;
+  background-color: #2b2b2b;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -38,6 +38,7 @@ body {
   padding: 8px 20px;
   -webkit-box-shadow: 0px 6px 8px -3px rgba(0, 0, 0, 0.31);
           box-shadow: 0px 6px 8px -3px rgba(0, 0, 0, 0.31);
+  outline: 1px solid #0e0e0e;
   position: sticky;
   top: 0;
   z-index: 1;
@@ -59,7 +60,7 @@ body {
 .search-form__input {
   font-family: "Ubuntu";
   font-size: 16px;
-  background: #2c3032;
+  background: #3e3e3e;
   border: none;
   border-radius: 20px;
   padding: 20px 49px 20px 22px;
@@ -70,7 +71,7 @@ body {
   width: 100%;
   -webkit-transition: 0.55s;
   transition: 0.55s;
-  outline: none;
+  outline: 1px solid #212121;
 }
 .search-form__input:focus {
   -webkit-transition: 0.55s;
@@ -175,6 +176,9 @@ body {
 .gallery__item {
   display: block;
   position: relative;
+  box-shadow: 0px 5px 6px -1px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0px 5px 6px -1px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0px 5px 6px -1px rgba(0, 0, 0, 0.6);
   width: 400px;
   height: 300px;
   overflow: hidden;
@@ -201,10 +205,10 @@ body {
   transition: 0.5s;
 }
 .gallery__img:hover {
-  -webkit-transition: all 20s cubic-bezier(0.25, 0.1, 0.25, 1);
-  transition: all 20s cubic-bezier(0.25, 0.1, 0.25, 1);
-  -webkit-transform: scale3d(1.5, 1.5, 1.5);
-          transform: scale3d(1.5, 1.5, 1.5);
+  -webkit-transition: all 7s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: all 7s cubic-bezier(0.25, 0.1, 0.25, 1);
+  -webkit-transform: scale3d(1.1, 1.1, 1.1);
+          transform: scale3d(1.1, 1.1, 1.1);
 }
 .gallery__figcaption {
   width: 100%;
@@ -242,6 +246,9 @@ body {
   font-size: 20px;
   -webkit-transition: all 0.15s;
   transition: all 0.15s;
+  box-shadow: 0px 5px 6px -1px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0px 5px 6px -1px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0px 5px 6px -1px rgba(0, 0, 0, 0.6);
 }
 .load-more:hover {
   -webkit-transition: 0.15s;
