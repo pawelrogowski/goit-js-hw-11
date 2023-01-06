@@ -238,22 +238,21 @@ body {
 
 .load-more {
   display: none;
-  width: 150px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
   cursor: pointer;
   color: #fcfeff;
   background: #2c3032;
   border: none;
-  border-radius: 50px;
+  border-radius: 50%;
   outline: 1px solid #1f9ede;
   margin: auto;
   font-family: Ubuntu;
   font-size: 20px;
   -webkit-transition: all 0.15s;
   transition: all 0.15s;
-  box-shadow: 0px 5px 6px -1px rgba(0, 0, 0, 0.6);
   -webkit-box-shadow: 0px 5px 6px -1px rgba(0, 0, 0, 0.6);
-  -moz-box-shadow: 0px 5px 6px -1px rgba(0, 0, 0, 0.6);
+          box-shadow: 0px 5px 6px -1px rgba(0, 0, 0, 0.6);
 }
 .load-more:hover {
   -webkit-transition: 0.15s;
@@ -261,4 +260,11 @@ body {
   outline: #1f9ede solid 1px;
   color: #1f9ede;
   scale: 1.05;
+}
+.load-more:focus {
+  -webkit-transition: 0.15s;
+  transition: 0.15s;
+  outline: #1f9ede solid 1px;
+  color: #1f9ede;
+  scale: 1;
 }/*# sourceMappingURL=main.css.map */
