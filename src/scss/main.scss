@@ -106,7 +106,10 @@ body {
       transition: 0.55s;
       background-color: $accent-color;
     }
-
+    &:focus .search-form__icon {
+      fill: #fcfeff;
+      transition: 0.55s;
+    }
     &:placeholder-shown + &__icon {
       cursor: auto;
     }

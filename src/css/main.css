@@ -145,6 +145,11 @@ body {
   transition: 0.55s;
   background-color: #1f9ede;
 }
+.search-form__button:focus .search-form__icon {
+  fill: #fcfeff;
+  -webkit-transition: 0.55s;
+  transition: 0.55s;
+}
 .search-form__button:-moz-placeholder-shown + .search-form__button__icon {
   cursor: auto;
 }
