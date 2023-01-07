@@ -9,11 +9,14 @@ const searchForm = document.querySelector('.search-form');
 const searchInput = document.querySelector('.search-form__input');
 const galleryElement = document.querySelector('.gallery');
 const loadMoreButton = document.querySelector('.load-more');
-const pageBottom = document.querySelector('.page-bottom');
+const footerElement = document.querySelector('.footer');
 
 let lastQuery = null;
 let page = 1;
 let totalPages = 0;
+
+const lightbox = new SimpleLightbox('.gallery .gallery__item');
+searchInput.focus();
 
 async function fetchImage(query, options, page) {
   try {
@@ -29,9 +32,11 @@ async function fetchImage(query, options, page) {
         ...options,
       },
     });
+
     totalPages = Math.ceil(response.data.totalHits / 40);
+
     if (response.data.totalHits === 0) {
-      Notify.failure(`Sorry no images for "${searchInput.value}" found`, {
+      Notify.failure(`Sorry, there are no images matching your search query. Please try again.`, {
         position: 'right-top',
       });
     } else if (page === 1) {
@@ -62,8 +67,10 @@ function updateGallery(imageData) {
     </figure>
   </a>`;
   });
+
   galleryElement.innerHTML += imageHTML;
   lightbox.refresh();
+
   if (page === 1 && totalPages !== 0) {
     loadMoreButton.style.display = 'block';
   } else {
@@ -71,17 +78,31 @@ function updateGallery(imageData) {
   }
 }
 
-const lightbox = new SimpleLightbox('.gallery .gallery__item');
+const footerObserver = new IntersectionObserver(async function (entries, observer) {
+  if (entries[0].isIntersecting === false) return;
+  if (page >= totalPages) {
+    Notify.info("You've reached the end of search results", {
+      position: 'right-bottom',
+    });
+    return;
+  }
+  page += 1;
+  const imageData = await fetchImage(lastQuery, {}, page);
+  updateGallery(imageData);
+});
 
 const debouncedSearch = debounce(async function () {
   const query = searchInput.value;
+
   if (query === lastQuery) {
     return;
   } else {
     galleryElement.innerHTML = '';
   }
+
   lastQuery = query;
   page = 1;
+
   const imageData = await fetchImage(query, {}, page);
   updateGallery(imageData);
 }, 300);
@@ -95,18 +116,5 @@ loadMoreButton.addEventListener('click', async function () {
   page += 1;
   const imageData = await fetchImage(lastQuery, {}, page);
   updateGallery(imageData);
-  pageBottomObserver.observe(pageBottom);
-});
-
-const pageBottomObserver = new IntersectionObserver(async function (entries, observer) {
-  if (entries[0].isIntersecting === false) return;
-  if (page >= totalPages) {
-    Notify.info("You've reached the end of search results", {
-      position: 'right-bottom',
-    });
-    return;
-  }
-  page += 1;
-  const imageData = await fetchImage(lastQuery, {}, page);
-  updateGallery(imageData);
+  footerObserver.observe(footerElement);
 });
