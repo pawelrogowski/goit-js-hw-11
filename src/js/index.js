@@ -2,6 +2,7 @@
 // The imported libraries are used to make HTTP requests, create a lightbox effect for the images, and provide visual notifications to the user.
 // When the user submits a search query or clicks the "Load More" button, the script fetches and displays the relevant images in the gallery element.
 // The script also includes IntersectionObserver to implement pagination after load more button is clicked.
+//test push codespaces
 
 import axios from 'axios';
 import SimpleLightbox from 'simplelightbox';
